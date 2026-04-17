@@ -2,22 +2,20 @@
   "workflowApiVersion": "1.1",
   "type": "Rest",
   "metaData": {
-    "category": "custom",
-    "expressionBuilderPrefix": "WebhookTest"
+    "category": "custom"
   },
   "lang": {
     "en-US": {
-      "name": "Webhook Test Activity",
-      "description": "Simple test activity sending contact data to webhook.site"
+      "name": "Webhook Test",
+      "description": "Send subscriberKey to webhook.site"
     }
   },
   "arguments": {
     "execute": {
       "inArguments": [
-        { "subscriberKey": "{{Contact.Key}}" },
+        { "subscriberKey": "{{Contact.Key}}" }
       ],
-      "outArguments": [],
-      "timeout": 10000
+      "outArguments": []
     }
   },
   "configurationArguments": {
@@ -29,15 +27,9 @@
   },
   "userInterfaces": {
     "configModal": {
+      "url": "https://guillaumesutera-lab.github.io/TEST/index.html",
       "height": 400,
-      "width": 600,
-      "url": "https://guillaumesutera-lab.github.io/TEST/index.html"
+      "width": 600
     }
-  },
-  "wizardSteps": [
-    {
-      "label": "Configuration",
-      "key": "step1"
-    }
-  ]
+  }
 }
