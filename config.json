@@ -1,0 +1,43 @@
+{
+  "workflowApiVersion": "1.1",
+  "type": "REST",
+  "metaData": {
+    "category": "custom",
+    "expressionBuilderPrefix": "WebhookTest"
+  },
+  "lang": {
+    "en-US": {
+      "name": "Webhook Test Activity",
+      "description": "Simple test activity sending contact data to webhook.site"
+    }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [
+        { "subscriberKey": "{{Contact.Key}}" },
+      ],
+      "outArguments": [],
+      "timeout": 10000
+    }
+  },
+  "configurationArguments": {
+    "applicationExtensionKey": "webhook-test-activity",
+    "execute": {
+      "url": "https://webhook.site/0e5ff5ff-e255-49d9-a9ae-e3b510ee0879",
+      "verb": "POST"
+    }
+  },
+  "userInterfaces": {
+    "configModal": {
+      "height": 400,
+      "width": 600,
+      "url": "index.html"
+    }
+  },
+  "wizardSteps": [
+    {
+      "label": "Configuration",
+      "key": "step1"
+    }
+  ]
+}
