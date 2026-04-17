@@ -3,8 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Webhook Test</title>
+
+  <!-- Postmonger -->
+  <script src="https://unpkg.com/postmonger"></script>
 </head>
+
 <body>
   <h1>Webhook Test</h1>
+
+  <script>
+    var connection = new Postmonger.Session();
+
+    // Dire à Journey Builder : "je suis prêt"
+    connection.trigger('ready');
+
+    // Quand JB envoie les données
+    connection.on('initActivity', function(data) {
+      console.log('initActivity', data);
+
+      // Dire : "config terminée"
+      connection.trigger('updateActivity', data);
+    });
+
+    // Quand l'utilisateur clique sur Done
+    connection.on('clickedNext', function() {
+      connection.trigger('nextStep');
+    });
+  </script>
 </body>
 </html>
