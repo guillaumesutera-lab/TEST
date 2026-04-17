@@ -1,6 +1,6 @@
 {
   "workflowApiVersion": "1.1",
-  "type": "REST",
+  "type": "Rest",
   "metaData": {
     "category": "custom",
     "expressionBuilderPrefix": "WebhookTest"
@@ -21,7 +21,7 @@
     }
   },
   "configurationArguments": {
-    "applicationExtensionKey": "webhook-test-activity",
+    "applicationExtensionKey": "34049de4-3539-43c2-94ea-214531c05313",
     "execute": {
       "url": "https://webhook.site/0e5ff5ff-e255-49d9-a9ae-e3b510ee0879",
       "verb": "POST"
@@ -31,7 +31,7 @@
     "configModal": {
       "height": 400,
       "width": 600,
-      "url": "index.html"
+      "url": "https://guillaumesutera-lab.github.io/TEST/index.html"
     }
   },
   "wizardSteps": [
